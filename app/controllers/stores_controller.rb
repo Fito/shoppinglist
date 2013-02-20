@@ -40,8 +40,7 @@ class StoresController < ApplicationController
   # POST /stores
   # POST /stores.json
   def create
-    puts params.inspect
-    @store = Store.new(params[:store])
+    @store = Store.new_for_group(params)
 
     respond_to do |format|
       if @store.save

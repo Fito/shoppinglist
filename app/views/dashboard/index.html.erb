@@ -1,0 +1,13 @@
+<div class='group'>
+  <h1><%= @group.name %></h1>
+  <% @group.stores.each do |store| %>
+    <div class='store'>
+      <h3><%= store.name %></h3>
+      <% store.items.each do |item| %>
+        <div class='item'>
+          <h5><%= item.name %></h5>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
