@@ -1,5 +1,15 @@
 <div class='group'>
   <h1><%= @group.name %></h1>
+  <div class='uncategorized'>
+    <h3>Uncategorized items</h3>
+    <% @group.items.each do |item| %>
+      <% if !item.store %>
+        <div class='item'>
+          <h5><%= item.name %></h5>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
   <% @group.stores.each do |store| %>
     <div class='store'>
       <h3><%= store.name %></h3>

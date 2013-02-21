@@ -2,7 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 div.group {
-	width: 250px;
+	width: 500px;
 	margin: 0 auto;
 	overflow: hidden;
+}
+
+div.group h1 {
+	padding: 5px 0px 5px 0px;
+	text-align: center;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
 }

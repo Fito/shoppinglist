@@ -1,6 +1,7 @@
 class Item < ActiveRecord::Base
   attr_accessible :description, :name
   belongs_to :store
+  belongs_to :group
   
   def store_name
     self.store ? self.store.name : nil
