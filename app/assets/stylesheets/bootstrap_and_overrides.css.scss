@@ -1,3 +1,13 @@
 @import "bootstrap";
-body { padding-top: 60px; }
-@import "bootstrap-responsive";
+
+@font-face {
+font-family: ActionMan;
+src: url('Action_Man-webfont.svg'),
+     url('Action_Man-webfont.woff');
+}
+
+body {
+	font-family: ActionMan;
+	padding-top: 40px;
+	background-color: #8CA93E;
+}

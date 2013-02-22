@@ -1,15 +1,50 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 div.group {
-	width: 500px;
+	width: 100%;
+	max-width: 600px;
 	margin: 0 auto;
 	overflow: hidden;
+	color: #FFF;
 }
 
 div.group h1 {
+	font-size: 36px;
 	padding: 5px 0px 5px 0px;
 	text-align: center;
-	border-top: 1px solid #CCC;
-	border-bottom: 1px solid #CCC;
+	color: #222;
+}
+
+div.group h3 {
+	font-size: 24px;
+	padding: 5px 0px 5px 0px;
+	height: 35px;	
+	text-align: center;
+}
+
+div.group div.stores {
+	width: 100%;
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+div.group div.stores div.store {
+	width: 50%;
+	min-width: 275px;
+	margin-top: 10px;
+	overflow: hidden;
+	float: left;
+}
+
+@media screen and (max-width:480px) {	
+	div.group div.stores div.store {
+		width: 100%;
+		float: none;
+	}
+	
+	div.item {
+		max-width: 270px;
+	}
 }

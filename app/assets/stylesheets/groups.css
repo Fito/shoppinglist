@@ -1,0 +1,10 @@
+div.uncategorized {
+	margin: 10px 0px;
+}
+
+div.uncategorized h3 {
+	background-color: #063;
+	border: 4px solid #063;
+	border-left: 0px;
+	border-right: 0px;
+}

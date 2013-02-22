@@ -1,3 +1,40 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.item {
+	overflow: hidden;
+	width: 96.5%;
+	min-width: 270px;
+	height: 40px;
+	margin: 6px 0px 6px 2px;
+	padding-left: 10px;
+	border: 1px solid #F6FA9C;
+	background-color: #F6FA9C;
+	border-radius: 7px;
+	box-shadow: 3px 3px 6px #444;
+	color: #333;
+}
+
+div.uncategorized div.item {
+	width: 48%;
+}
+
+div.item h5 {
+	margin: 10px 0px 18px 0px;
+	font-size: 18px;
+	text-align: center;
+}
+
+div.item button {
+	font-family: ActionMan;
+	float: left;
+	margin-right: 5px;
+	margin-left: 15px;
+}
+
+@media screen and (max-width:480px) {	
+	div.item {
+		margin: 10px 0px 10px 12px;
+	}
+}
