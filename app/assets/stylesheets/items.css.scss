@@ -4,7 +4,7 @@
 
 div.item {
 	overflow: hidden;
-	width: 96.5%;
+	width: 92.5%;
 	min-width: 270px;
 	height: 40px;
 	margin: 6px 0px 6px 2px;
@@ -14,6 +14,7 @@ div.item {
 	border-radius: 7px;
 	box-shadow: 3px 3px 6px #444;
 	color: #333;
+	cursor: pointer;
 }
 
 div.uncategorized div.item {

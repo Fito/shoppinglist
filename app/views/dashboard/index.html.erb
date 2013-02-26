@@ -4,9 +4,9 @@
     <h3>Uncategorized items</h3>
     <% @group.items.each do |item| %>
       <% if !item.store %>
-        <div class='item'>
+        <div class='item' id='<%= item.id %>'>
           <h5><%= item.name %></h5>
-          <%= button_tag "More info", {:class => 'more-info btn btn-info', :id => item.id} %>
+          <%= button_tag "More info", {:class => 'more-info btn btn-info'} %>
           <%= button_tag "Done", {:class => 'done btn btn-success'} %>
           <%= button_tag "Delete", {:class => 'delete btn btn-danger'}%>
         </div>
@@ -18,14 +18,19 @@
       <div class='store'>
         <h3><%= store.name %></h3>
         <% store.items.each do |item| %>
-          <div class='item'>
+        <div class='item' id='<%= item.id %>'>
             <h5><%= item.name %></h5>
-            <%= button_tag "More info", {:class => 'more-info btn btn-info', :id => item.id} %>
+            <%= button_tag "More info", {:class => 'more-info btn btn-info'} %>
             <%= button_tag "Done", {:class => 'done btn btn-success'} %>
             <%= button_tag "Delete", {:class => 'delete btn btn-danger'} %>
           </div>
         <% end %>
       </div>
     <% end %>
+  </div>
+  <div class='warning-message'>
+    <p>Are you sure?</p>
+    <button class='warning-yes btn btn-danger'>Yes</button>
+    <button class='warning-cancel btn'>Cancel</button>
   </div>
 </div>

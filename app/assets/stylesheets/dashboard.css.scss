@@ -38,6 +38,26 @@ div.group div.stores div.store {
 	float: left;
 }
 
+div.group div.warning-message {
+	display: none;
+	position: absolute;
+	padding: 20px;
+	margin: 5px;
+	background-color: #CCC;
+	border-radius: 10px;
+	box-shadow: 3px 3px 6px #444;
+}
+
+div.group div.warning-message p {
+	font-family: ActionMan;
+	font-size: 18px;
+	color: black;	
+}
+
+div.group div.warning-message button.btn {
+	margin-right: 10px;
+}
+
 @media screen and (max-width:480px) {	
 	div.group div.stores div.store {
 		width: 100%;
