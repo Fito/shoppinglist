@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  attr_accessible :description, :name
+  attr_accessible :description, :name, :done
   belongs_to :store
   belongs_to :group
   

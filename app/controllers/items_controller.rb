@@ -68,6 +68,22 @@ class ItemsController < ApplicationController
       end
     end
   end
+  
+  # PUT /items/1/done
+  # PUT /items/1/done.json
+  def done
+    @item = Item.find(params[:id])
+
+    respond_to do |format|
+      if @item.update_attributes( { :done => true } )
+        format.html { redirect_to @item }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # DELETE /items/1
   # DELETE /items/1.json

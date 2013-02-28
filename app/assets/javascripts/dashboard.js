@@ -2,6 +2,7 @@ $(function init(){
   var moreInfoBtn = '<button class="more-info btn btn-info" name="button" type="submit">More info</button>'
   var doneBtn = '<button class="done btn btn-success" name="button" type="submit">Done</button>'
   var deleteBtn = '<button class="delete btn btn-danger" name="button" type="submit">Delete</button>'
+  var cancelBtn = '<button class="cancel btn btn-danger" name="button" >Cancel</button>'
   
   function itemsSetup(items){
     items.each( function(index){
@@ -9,9 +10,9 @@ $(function init(){
         var self = $(this);
         if (self.find('h5').text()) {
           if (self.height() < 78){
-            self.height(78);
+            self.animate({height: '78'}, 'slow');
           } else {
-            self.height(40);
+            self.animate({height: '40'}, 'slow');
           }        
         }
         
@@ -41,7 +42,7 @@ $(function init(){
         var parent = self.parent();
         var url = 'items/' + self.parent().attr('id') + '.json';
         $.get(url, function(data){
-          self.parent().height(145);
+          parent.animate({height: '145'}, 'slow');
           if ($('p', parent).text() != data["description"]) {
             self.parent().append('<p>' + data["description"] + '</p>')
           }
@@ -73,13 +74,19 @@ $(function init(){
     var container = self.parent().parent();
     var newItem = $('<div class="item"></div>');
     container.append(newItem);
-    newItem.height(220);
+    newItem.animate({height: '220'}, 'slow');
     container.focus();
     var url = "items/new";
     $.get(url, function(data) {
-      var form = $(data)[2];
+      var form = $($(data)[2]);
+      form.find('div.actions').append(cancelBtn);
       newItem.html(form);
       $('div.item form #item_name').focus();
+      $('div.item form div.actions button.cancel').click( function(e){
+        e.preventDefault();
+        newItem.remove();
+      });
+      
       $('div.item form div.actions input.btn').click( function(e){
         e.preventDefault();
         $.post("/items.json", {
@@ -91,7 +98,7 @@ $(function init(){
         }, function(data){
           newItem.html('<h5>' + data['name'] + '</h5>').append(moreInfoBtn + doneBtn + deleteBtn);
           newItem.attr('id', data['id']);
-          newItem.height(40);
+          newItem.animate({height: '40'}, 'slow');
           itemsSetup(newItem);
         });
       });
