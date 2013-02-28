@@ -7,10 +7,17 @@ class Item < ActiveRecord::Base
     self.store ? self.store.name : nil
   end
   
-  def self.new_for_store(params)
-    store = Store.find_by_name(params[:store_name])
+  def self.new_for_group(params)
     item = Item.new(params[:item])
-    item.store_id = store ? store.id : nil
+    if params[:store_name]
+      store = Store.find_by_name(params[:store_name])
+      item.store_id = store ? store.id : nil
+      item.group_id = store && store.group ? store.group.id : nil
+    elsif params[:group_name]
+      group = Group.find_by_name(params[:group_name])
+      item.group_id = group ? group.id : nil
+    end
+
     item
   end
 end

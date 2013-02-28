@@ -30,8 +30,21 @@ div.item h5 {
 div.item button {
 	font-family: ActionMan;
 	float: left;
-	margin-right: 5px;
-	margin-left: 15px;
+	margin: 0px 5px 18px 15px;
+}
+
+div.item p {
+	margin: 0px 15px 0px 10px;
+	font-family: ActionMan;
+	font-size: 14px;
+}
+
+div.item form {
+	margin: 10px 0px;
+}
+
+div.item form div.field, div.actions {
+	text-align: center;
 }
 
 @media screen and (max-width:480px) {	

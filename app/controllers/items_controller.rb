@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
     @item = Item.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => !request.xhr? }# new.html.erb
       format.json { render json: @item }
     end
   end
@@ -40,7 +40,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new_for_store(params)
+    @item = Item.new_for_group(params)
 
     respond_to do |format|
       if @item.save

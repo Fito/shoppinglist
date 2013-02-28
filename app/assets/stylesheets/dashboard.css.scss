@@ -58,6 +58,11 @@ div.group div.warning-message button.btn {
 	margin-right: 10px;
 }
 
+div.group button.add-item {
+	margin-right: 15px;
+	float: right;
+}
+
 @media screen and (max-width:480px) {	
 	div.group div.stores div.store {
 		width: 100%;

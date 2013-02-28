@@ -13,4 +13,8 @@ class Store < ActiveRecord::Base
     store.group_id = group ? group.id : nil
     store
   end
+  
+  def has_items?
+    !self.items.empty?
+  end  
 end

@@ -1,7 +1,7 @@
 <div class='group'>
   <h1><%= @group.name %></h1>
   <div class='uncategorized'>
-    <h3>Uncategorized items</h3>
+    <h3>Uncategorized items<%= button_tag "+", {:class => 'add-item btn btn-success'}%></h3>
     <% @group.items.each do |item| %>
       <% if !item.store %>
         <div class='item' id='<%= item.id %>'>
@@ -16,7 +16,7 @@
   <div class='stores'>
     <% @group.stores.each do |store| %>
       <div class='store'>
-        <h3><%= store.name %></h3>
+        <h3><%= store.name %><%= button_tag "+", {:class => 'add-item btn btn-success'}%></h3>
         <% store.items.each do |item| %>
         <div class='item' id='<%= item.id %>'>
             <h5><%= item.name %></h5>
