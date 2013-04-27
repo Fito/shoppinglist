@@ -6,10 +6,12 @@ gem 'rails', '3.2.6'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'bootstrap-sass'
+gem 'mustache-rails', :require => 'mustache/railtie'
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.12.2'
   gem 'sqlite3'
+  gem 'jasminerice'
 end
 
 group :production do

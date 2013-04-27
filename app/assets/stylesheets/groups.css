@@ -1,8 +1,5 @@
-div.uncategorized {
-	margin: 10px 0px;
-}
-
 div.uncategorized h3 {
+	padding-top: 10px;
 	background-color: #063;
 	border: 4px solid #063;
 	border-left: 0px;

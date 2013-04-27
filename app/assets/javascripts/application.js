@@ -11,5 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require bootstrap
+//= require underscore-min
+//= require backbone-min
+//= require shopping_list
+//= require router
 //= require_tree .

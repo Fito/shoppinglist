@@ -1,5 +1,5 @@
 <div class='group'>
-  <h1><%= @group.name %></h1>
+  <h1><%= @group.name %><%= button_tag "Add Store", {:class => 'add-store btn btn-success'}%></h1>
   <div class='uncategorized'>
     <h3>Uncategorized items<%= button_tag "+", {:class => 'add-item btn btn-success'}%></h3>
     <% @group.items.each do |item| %>

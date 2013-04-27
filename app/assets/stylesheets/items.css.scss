@@ -40,11 +40,20 @@ div.item p {
 }
 
 div.item form {
+	font-family: ActionMan;
 	margin: 10px 0px;
 }
 
 div.item form div.field, div.actions {
 	text-align: center;
+}
+
+div.item form div.actions button.cancel {
+	margin-left: 36px;
+}
+
+div.item form div.actions input.btn {
+	font-family: ActionMan;
 }
 
 @media screen and (max-width:480px) {	

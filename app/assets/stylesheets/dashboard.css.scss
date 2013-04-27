@@ -6,15 +6,16 @@ div.group {
 	width: 100%;
 	max-width: 600px;
 	margin: 0 auto;
+	margin-bottom: 20px;
 	overflow: hidden;
 	color: #FFF;
 }
 
 div.group h1 {
 	font-size: 36px;
-	padding: 5px 0px 5px 0px;
+	padding: 15px 0px;
 	text-align: center;
-	color: #222;
+	background-color: #056;
 }
 
 div.group h3 {
@@ -58,7 +59,8 @@ div.group div.warning-message button.btn {
 	margin-right: 10px;
 }
 
-div.group button.add-item {
+div.group button.add-item, button.add-store {
+	margin-top: 2px;
 	margin-right: 15px;
 	float: right;
 }
