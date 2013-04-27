@@ -7,11 +7,15 @@ gem 'rails', '3.2.6'
 
 gem 'bootstrap-sass'
 gem 'mustache-rails', :require => 'mustache/railtie'
+gem 'hogan_assets'
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.12.2'
   gem 'sqlite3'
   gem 'jasminerice'
+  gem 'selenium-webdriver'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 group :production do

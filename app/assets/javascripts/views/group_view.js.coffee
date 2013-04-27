@@ -1,3 +1,10 @@
 class ShoppingList.GroupView extends Backbone.View
-	template: 'group.mustache'
-	model: ShoppingList.Group
+	template_name: 'group'
+	className: 'group'
+		
+	template: ->
+		HoganTemplates[@template_name]
+	
+	render: ->
+		@$el.html(@template().render(@model.toJSON()))
+	

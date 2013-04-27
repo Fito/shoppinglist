@@ -13,6 +13,7 @@
 //= require jquery
 //= require underscore-min
 //= require backbone-min
+//= require hogan
 //= require shopping_list
-//= require router
 //= require_tree .
+//= require_tree ./templates

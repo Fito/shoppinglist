@@ -7,6 +7,7 @@ ShoppingList::Application.routes.draw do
   
   match 'items/:id/done' => 'items#done', :via => :put
 
+  match 'dashboard' => 'dashboard#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -57,7 +58,7 @@ ShoppingList::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'dashboard#index'
+  root :to => 'stores#index'
 
   # See how all your routes lay out with "rake routes"
 

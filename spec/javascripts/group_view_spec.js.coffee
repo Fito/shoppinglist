@@ -1,17 +1,13 @@
 describe 'ShoppingList.GroupView', ->
-	it "has the right template", ->
-		group_view = new ShoppingList.GroupView
-		expect(group_view.template).not.toBeUndefined()
-		expect(group_view.template).toBe('group.mustache')
-	
-	it "has the right model", ->
-		group = new ShoppingList.Group
-		group_view = new ShoppingList.GroupView model: group
-		expect(group_view.model instanceof ShoppingList.Group).toBe(true)
+	beforeEach ->
+		group = new ShoppingList.Group { name: 'Group1' }
+		@group_view = new ShoppingList.GroupView model: group
 	
 	it "renders the right data", ->
-		group = new ShoppingList.Group
-		group_view = new ShoppingList.GroupView model: group
-		group_view.render()
-		expect(group_view.el).toContain()
+		@group_view.render()
+		expect(@group_view.$el.text()).toContain('Group1')
 	
+	it "renders the right template", ->
+		@group_view.render()
+		expect(@group_view.$('h1').length).toBe(1)
+		expect(@group_view.$('button').length).toBe(1)
