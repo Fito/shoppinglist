@@ -15,5 +15,7 @@
 //= require backbone-min
 //= require hogan
 //= require shopping_list
+//= require_tree ./models
+//= require_tree ./collections
 //= require_tree .
 //= require_tree ./templates

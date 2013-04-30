@@ -7,5 +7,6 @@ window.ShoppingList =
 		stores_view.render()
 		$('#app').html(stores_view.el)
 	
-$(document).ready -> 
-	ShoppingList.init()
+$(document).ready ->
+  if $('body').hasClass('home')
+	  ShoppingList.init()

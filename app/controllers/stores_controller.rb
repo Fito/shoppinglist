@@ -3,11 +3,12 @@ class StoresController < ApplicationController
   # GET /stores.json
   def index
     @stores = Store.all
+    render json: @stores
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @stores }
-    end
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @stores }
+    # end
   end
 
   # GET /stores/1
