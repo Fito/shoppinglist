@@ -6,7 +6,6 @@ class ShoppingList.StoreView extends Backbone.View
     HoganTemplates[@template_name]
   
   render: ->
-    console.log(@model)
     @$el.html(@template().render(@model))
   
 
