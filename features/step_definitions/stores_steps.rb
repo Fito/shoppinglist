@@ -2,6 +2,10 @@ Given(/^there are no stores$/) do
   Store.delete_all
 end
 
+Given(/^there are stores$/) do
+  Store.new(:name => 'Corner Store').save
+end
+
 Given(/^I go to the home page$/) do
   visit('/')
 end
@@ -24,4 +28,9 @@ end
 
 Then(/^I should see the store I created$/) do
   page.should have_content('My Store')
+end
+
+Then(/^I should see a store$/) do
+  store = Store.last
+  page.should have_content(store.name)
 end

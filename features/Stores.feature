@@ -8,6 +8,11 @@ Feature: Seeing and Creating Stores
     And I go to the home page
     Then I should see the Add Store button
   
+  Scenario: When there are stores
+    Given there are stores
+    And I go to the home page
+    Then I should see a store
+  
   Scenario: Creating a store
     Given there are no stores
     And I go to the home page

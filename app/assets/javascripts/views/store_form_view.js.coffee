@@ -15,4 +15,5 @@ class ShoppingList.StoreFormView extends Backbone.View
     store = @collection.create({ name: store_name })
     store_view = new ShoppingList.StoreView model: { name: store_name }
     @$el.parent().append(store_view.render())
+    @.remove()
   
