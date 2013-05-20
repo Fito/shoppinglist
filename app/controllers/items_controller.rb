@@ -2,8 +2,8 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
-
+    @items = params[:store_id] ? Item.where(:store_id => params[:store_id]) : Item.all
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @items }

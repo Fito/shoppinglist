@@ -4,21 +4,17 @@
 
 div.item {
 	overflow: hidden;
-	width: 92.5%;
-	min-width: 270px;
+	max-width: 400px;
 	height: 40px;
-	margin: 6px 0px 6px 2px;
+	margin: 6px auto;
 	padding-left: 10px;
+	text-align: center;
 	border: 1px solid #F6FA9C;
 	background-color: #F6FA9C;
 	border-radius: 7px;
 	box-shadow: 3px 3px 6px #444;
 	color: #333;
 	cursor: pointer;
-}
-
-div.uncategorized div.item {
-	width: 48%;
 }
 
 div.item h5 {
@@ -29,8 +25,6 @@ div.item h5 {
 
 div.item button {
 	font-family: ActionMan;
-	float: left;
-	margin: 0px 5px 18px 15px;
 }
 
 div.item p {
@@ -39,9 +33,13 @@ div.item p {
 	font-size: 14px;
 }
 
-div.item form {
-	font-family: ActionMan;
-	margin: 10px 0px;
+.item-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #F6FA9C;
+  border-radius: 10px;  
 }
 
 div.item form div.field, div.actions {
@@ -58,6 +56,6 @@ div.item form div.actions input.btn {
 
 @media screen and (max-width:480px) {	
 	div.item {
-		margin: 10px 0px 10px 12px;
+		margin: 10px 12px 10px 12px;
 	}
 }

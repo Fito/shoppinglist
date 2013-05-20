@@ -34,3 +34,11 @@ Then(/^I should see a store$/) do
   store = Store.last
   page.should have_content(store.name)
 end
+
+Given(/^I delete a store$/) do
+  click_on('x')
+end
+
+Then(/^I should not see the store$/) do
+  page.should_not have_content("Corner Store")
+end

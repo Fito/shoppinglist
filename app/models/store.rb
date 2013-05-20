@@ -1,7 +1,7 @@
 class Store < ActiveRecord::Base
   attr_accessible :name
   belongs_to :group
-  has_many :items
+  has_many :items, :dependent => :destroy
   
   def group_name
     self.group ? self.group.name : nil

@@ -20,3 +20,12 @@ Feature: Seeing and Creating Stores
     And I enter information into the form
     And I click save
     Then I should see the store I created
+  
+  Scenario: Deleting a store
+    Given there are stores
+    And I go to the home page
+    And I delete a store
+    Then I should not see the store
+    And I go to the home page
+    Then I should not see the store
+    

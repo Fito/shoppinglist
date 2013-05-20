@@ -3,7 +3,7 @@ window.ShoppingList =
 	Collections : {}
 	Views : {}
 	init: ->
-		collection = new ShoppingList.StoresCollection  
+		collection = new ShoppingList.StoresCollection
 		stores_view = new ShoppingList.StoresView collection: collection
 		stores_view.render()
 		$('#app').html(stores_view.el)
