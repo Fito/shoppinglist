@@ -31,4 +31,5 @@ class ShoppingList.StoreView extends Backbone.View
   add_item: ->
     item_form = new ShoppingList.ItemFormView model: @model, collection: @collection
     @.$('.item-form-container').html(item_form.render())
+    
       

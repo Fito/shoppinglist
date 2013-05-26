@@ -28,4 +28,17 @@ describe 'ShoppingList.ItemFormView', ->
       
     it 'should replace the done button by an undo button', ->
       @item_view.$('.done').trigger('click')
-      expect(@item_view.$('button.undo').text()).toBe('Undo')      
+      expect(@item_view.$('button.undo').text()).toBe('Undo')
+    
+    describe "When undo button is clicked", ->
+      it 'should change the item background color', ->
+        spyOn(@item_view.$el, 'css').andCallThrough()
+        @item_view.$('.done').trigger('click')
+        @item_view.$('.undo').trigger('click')
+        expect(@item_view.$el.css).toHaveBeenCalledWith('background-color', '#F6FA9C')
+
+      it 'should replace the done button by an undo button', ->
+        @item_view.$('.done').trigger('click')
+        @item_view.$('.undo').trigger('click')
+        expect(@item_view.$('button.done').text()).toBe('Done')
+      

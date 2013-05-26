@@ -2,10 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.item {
+.item {
 	overflow: hidden;
 	max-width: 400px;
-	height: 40px;
+	height: 45px;
 	margin: 6px auto;
 	padding-left: 10px;
 	text-align: center;
@@ -17,17 +17,22 @@ div.item {
 	cursor: pointer;
 }
 
-div.item h5 {
+.item.done {
+  background-color: rgb(255, 140, 32);
+  border-color: #ff8c20;
+}
+
+.item h5 {
 	margin: 10px 0px 18px 0px;
 	font-size: 18px;
 	text-align: center;
 }
 
-div.item button {
+.item button {
 	font-family: ActionMan;
 }
 
-div.item p {
+.item p {
 	margin: 0px 15px 0px 10px;
 	font-family: ActionMan;
 	font-size: 14px;
@@ -52,10 +57,4 @@ div.item form div.actions button.cancel {
 
 div.item form div.actions input.btn {
 	font-family: ActionMan;
-}
-
-@media screen and (max-width:480px) {	
-	div.item {
-		margin: 10px 12px 10px 12px;
-	}
 }
