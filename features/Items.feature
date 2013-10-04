@@ -6,7 +6,7 @@ Feature: Seeing and Creating Items
   Scenario: When there are no items
     Given there are stores
     And I go to the home page
-    Then I should see the Add Item button
+    Then I should see the + item button
   
   Scenario: Creating an item
     Given there are stores
@@ -33,4 +33,11 @@ Feature: Seeing and Creating Items
     And I click on the Undo button
     Then I should see the item marked as undone
   
+  Scenario: Seeing an items more info
+    Given there are items
+    And I go to the home page
+    And I click on an item
+    Then I should see the More info button
+    And I click on the More info button
+    Then I should see the items description
     

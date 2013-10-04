@@ -14,7 +14,7 @@ class ShoppingList.StoreView extends Backbone.View
     HoganTemplates[@template_name]
   
   render: ->
-    @.listenTo(@collection, 'change', @render_items_views);
+    @collection.on('add', @render_items_views)
     @$el.html(@template().render(@model.attributes))
   
   render_items_views: =>

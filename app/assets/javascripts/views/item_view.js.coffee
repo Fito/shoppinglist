@@ -12,11 +12,14 @@ class ShoppingList.ItemView extends Backbone.View
   
   render: ->
     @$el.html(@template().render(@model.attributes))
+    @set_done_item()
+    @$el
+  
+  set_done_item: ->
     if @model.get('done')
       @$el.addClass('done')
       @scratch()
-      @set_undo_button()
-    @$el
+      @set_undo_button()    
   
   toggle_height: (e)->
     child_of_item = @$el.has($(e.target))
@@ -30,7 +33,7 @@ class ShoppingList.ItemView extends Backbone.View
     @scratch()
     @$el.addClass('done')
     @set_undo_button()
-    @model.save({done: true})
+    @model.save({ done: true, success: @toggle_height.bind(@) })
   
   mark_undone: (e)->
     @unscratch()

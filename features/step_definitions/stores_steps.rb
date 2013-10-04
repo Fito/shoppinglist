@@ -10,9 +10,9 @@ Given(/^I go to the home page$/) do
   visit('/')
 end
 
-Then(/^I should see the Add Store button$/) do
-  page.should have_content('Add Store')
-end
+# Then(/^I should see the Add Store button$/) do
+#   page.should have_content('Add Store')
+# end
 
 When(/^I click the Add Store button$/) do
   click_on('Add Store')

@@ -1,6 +1,6 @@
-Then(/^I should see the Add Item button$/) do
-  page.should have_content('+ item')
-end
+# Then(/^I should see the Add Item button$/) do
+#   page.should have_content('+ item')
+# end
 
 Given(/^I click on the Add Item button$/) do
   click_on('+ item')
@@ -17,7 +17,7 @@ end
 Given(/^there are items$/) do
   store = Store.new(:name => 'Corner Store')
   store.save
-  Item.new(:name => 'my item', :store_id => store.id).save
+  Item.new(:name => 'my item', :description => 'Test Item', :store_id => store.id).save
 end
 
 Given(/^there is a Done item$/) do
@@ -46,4 +46,13 @@ end
 
 Then(/^I should see the item marked as undone$/) do
   page.should_not have_selector('.item.done')
+end
+
+
+Then(/^I click on the More info button$/) do
+  find('.more-info').click
+end
+
+Then(/^I should see the items description$/) do
+  page.should have_content(Item.last.description)
 end
